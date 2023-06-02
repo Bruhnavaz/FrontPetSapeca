@@ -68,9 +68,9 @@ const Home = () => {
               className="card-img"
             />
             <div className="card-content">
-              <h3 className="card-title">Nome do Produto</h3>
+              <h3 className="card-title">Pedigree</h3>
               <p className="card-price">R$ 99,99</p>
-              <p className="card-description">Descrição do produto...</p>
+              <p className="card-description">Ração Pedigree para cachorro 15kg</p>
               <div className="card-icons">
                 <span className="heart-icon">&#10084;</span>
                 <span className="cart-icon">&#128722;</span>
@@ -84,9 +84,9 @@ const Home = () => {
               className="card-img"
             />
             <div className="card-content">
-              <h3 className="card-title">Nome do Produto</h3>
-              <p className="card-price">R$ 99,99</p>
-              <p className="card-description">Descrição do produto...</p>
+              <h3 className="card-title">Whiskas sabor peixe</h3>
+              <p className="card-price">R$ 49,99</p>
+              <p className="card-description">Wiskas sabor peixe 900g</p>
               <div className="card-icons">
                 <span className="heart-icon">&#10084;</span>
                 <span className="cart-icon">&#128722;</span>
@@ -101,9 +101,9 @@ const Home = () => {
               className="card-img"
             />
             <div className="card-content">
-              <h3 className="card-title">Nome do Produto</h3>
-              <p className="card-price">R$ 99,99</p>
-              <p className="card-description">Descrição do produto...</p>
+              <h3 className="card-title">Areia Premium</h3>
+              <p className="card-price">R$ 109,00</p>
+              <p className="card-description">Areia para gato premium 4kg</p>
               <div className="card-icons">
                 <span className="heart-icon">&#10084;</span>
                 <span className="cart-icon">&#128722;</span>
@@ -118,9 +118,9 @@ const Home = () => {
               className="card-img"
             />
             <div className="card-content">
-              <h3 className="card-title">Nome do Produto</h3>
-              <p className="card-price">R$ 99,99</p>
-              <p className="card-description">Descrição do produto...</p>
+              <h3 className="card-title">Cama Hamster </h3>
+              <p className="card-price">R$ 30,00</p>
+              <p className="card-description">Serragem para hamster 100g</p>
               <div className="card-icons">
                 <span className="heart-icon">&#10084;</span>
                 <span className="cart-icon">&#128722;</span>

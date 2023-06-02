@@ -23,6 +23,7 @@ const Fornecedor = () => {
         reset()
     }
 }
+
     return (
       <>
       <div className="page-fornecedor">
@@ -103,6 +104,12 @@ const Fornecedor = () => {
           </div>
 
           <div className="botoes">
+      
+          <Button id="botao-editar-fornecedor" mt={4} colorScheme="teal" type="delete"
+          >
+            Excluir
+          </Button>
+          
           <Button id="botao-editar-fornecedor" mt={4} colorScheme="teal" type="submit">
             Editar
           </Button>

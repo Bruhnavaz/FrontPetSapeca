@@ -110,7 +110,19 @@ const Produtos = () => {
             <Input type="text" {...register("publico", { required: true })} />
           </FormControl>
           <div className="botoes">
-          <Button id="botao-editar-produto" mt={4} colorScheme="teal" type="submit">
+
+          <Button id="botao-cadastrar-produto" mt={4} colorScheme="teal" type="submit">
+            Excluir
+          </Button>
+
+          <Button id="botao-editar-produto" mt={4} colorScheme="teal" 
+            // isLoading={isLoadingDeleteProduto}
+            // onClick={() => {
+            //     if(window.confirm('Deseja excluir?')){
+            //         onDeleteProdutos(produto.id)
+            //     }
+            // }}
+          >
             Editar
           </Button>
 

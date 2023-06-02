@@ -1,7 +1,7 @@
 import {useToast,Stack,FormControl,FormLabel,Input,Button,} from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { useUsers } from "../../hooks/mutationUser";
- import { Link } from "react-router-dom";
+//  import { Link } from "react-router-dom";
 
 const CreateUser = () => {
   const toast = useToast()
@@ -91,8 +91,8 @@ const CreateUser = () => {
             />
           </FormControl>
 
-          <Button id="botao-cadastrar" mt={4} colorScheme="teal" type="submit">
-            <Link to="/home">Cadastrar</Link>{" "} 
+          <Button id="botao-cadastrar" mt={4} colorScheme="teal" type="submit">Cadastrar
+            {/* <Link to="/home">Cadastrar</Link>{" "}  */}
           </Button>
         </Stack>
       </form>

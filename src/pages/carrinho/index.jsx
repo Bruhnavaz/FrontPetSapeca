@@ -66,7 +66,7 @@ const Carrinho = () => {
                 </div>
               </div>
             </div>
-            <div className="card">
+            {/* <div className="card">
               <img
                 src="caminho_da_imagem"
                 alt="Imagem do Produto"
@@ -92,7 +92,7 @@ const Carrinho = () => {
                   <span className="cart-icon">&#10084;</span>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className="card">
               <img
                 src="caminho_da_imagem"
