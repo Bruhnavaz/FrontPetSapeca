@@ -1,0 +1,666 @@
+/************/
+/*CSS GERAL*/
+/************/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+} */
+
+/* a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #000;
+} */
+
+/* body {
+  margin: 0;
+  display: flex;
+  place-items: center; */
+  /* min-width: 320px;
+  min-height: 100vh; */
+  /* height: 100vh;
+} */
+
+/* h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+
+/***********************************/
+/**************HEADER***************/
+/***********************************/
+
+.header-user {
+  width: 100vw;
+  background-color: #eea34a;
+  position: fixed;
+  top: 0;
+  padding: 10px;
+}
+
+.logo-header {
+  width: 55px;
+}
+
+.header-admin {
+  width: 100vw;
+  background-color: #50d1d9;
+  position: fixed;
+  top: 0;
+  padding: 10px;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  color: #000;
+}
+
+/***********************************/
+/******************MAIN*************/
+/***********************************/
+
+.main-login {
+  width: 100vw;
+  height: 100vh;
+  background-color: #c3c3c3;
+  display: flex;
+}
+
+.main-cadastrar {
+  width: 100vw;
+  height: 100vh;
+  background-color: #c3c3c3;
+  display: flex;
+}
+
+.main-home{ 
+  position: fixed;
+  top: 10vh;
+  height: 90vh;
+  top: 12vh;
+  height: 88vh;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.main-fav{ 
+  position: fixed;
+  top: 10vh;
+  height: 90vh;
+  top: 12vh;
+  height: 88vh;
+}
+
+.main-carrinho{ 
+  position: fixed;
+  top: 10vh;
+  height: 90vh;
+  top: 12vh;
+  height: 88vh;
+}
+
+.main-fornecedor{ 
+  position: fixed;
+  top: 12vh;
+  height: 88vh;
+  width: 100vw;
+  display: flex;
+  background-color: #D9D9D9;
+}
+
+.main-produto{ 
+  position: fixed;
+  top: 12vh;
+  height: 88vh;
+  width: 100vw;
+  display: flex;
+  background-color: #D9D9D9;
+}
+
+
+/***********************************/
+/**************TELA CADASTRO********/
+/***********************************/
+
+.logo-cadastrar{
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+}
+.logo-cadastrar img{
+  width: 90%;
+  margin-left: 10%;
+}
+
+.container-cadastrar {
+  background-color: #50d1d9;
+  height: 100vh;
+  width: 50vw;
+  border-radius: 14px;
+  text-align: center;
+}
+
+#nome,
+#cpf,
+#email,
+#rua,
+#estado,
+#cidade,
+#bairro,
+#numero,
+#senha {
+  background-color: #d9d9d9;
+  width: 25vw;
+  height: 2em;
+  right: 10%;
+}
+
+.nome,
+.cpf,
+.email,
+.rua,
+.estado,
+.cidade,
+.bairro,
+.numero,
+.senha {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titulo-cadastro {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.form-cadastrar {
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#botao-cadastrar {
+  background-color: #eea34a;
+  width: 150px;
+  margin-left: 75%;
+  margin-top: 40px;
+}
+
+/* .space-5{
+  height: 5px;
+} */
+
+/***********************************/
+/************TELA LOGIN*************/
+/***********************************/
+
+
+.main-login h1 {
+  text-align: center;
+}
+
+.logo-login {
+  height: 25vh;
+  width: 100vw;
+  margin-top: 2%;
+  justify-content: center;
+  display: flex;
+}
+
+.container-login {
+  background-color: #50d1d9;
+  width: 90vh !important;
+  border-radius: 14px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+}
+
+.titulo-login {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+#botao-login {
+  background-color: #eea34a;
+  width: 150px;
+  margin-left: 80%;
+  margin-top: 25px;
+}
+
+#botao-cadastro {
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #eea34a;
+  width: 150px;
+  margin-top: 15px;
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+}
+
+.form-login {
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/***********************************/
+/***************TELA HOME***********/
+/***********************************/
+
+.page-home {
+  background-color: #D9D9D9;
+}
+
+.page-open {
+  border-bottom: 2px #50d1d9 solid;
+}
+
+.carrossel-container {
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.carrossel-itens {
+  display: flex;
+  scroll-snap-align: start;
+  width: fit-content;
+}
+
+.item {
+  flex: 0 0 60vw;
+  height: 300px;
+  width: 600px;
+  scroll-snap-align: start;
+  margin-right: 12px;
+}
+
+.item-banner {
+  height: 300px;
+  width: -webkit-fill-available;
+}
+
+/***********************************/
+/*********CARD DE PRODUTO***********/
+/***********************************/
+
+
+.produtos {
+  align-items: center;
+  width: 95vw;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 12px;
+  padding: 10px;
+  align-items: center;
+}
+
+.card-img {
+  width: 60%;
+  height: auto;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-price {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.heart-icon, .cart-icon {
+  font-size: 20px;
+}
+
+.contador {
+  display: flex;
+  width: 45px;
+}
+
+.valor {
+  border: 1px #EEA34A solid;
+  width: 25px;
+  text-align: center;
+  background-color: #EEA34A;
+}
+
+
+/***********************************/
+/**************ADMIN GERAL**********/
+/***********************************/
+
+.page-admin {
+  border-bottom: 2px #eea34a solid;
+}
+
+/***********************************/
+/**********TELA FORNECEDORES********/
+/***********************************/
+
+
+.fornecedores{
+width: 50vw;
+height: 100%;
+}
+
+.form-fornecedores{
+  padding: 10px;
+  width: 50vw;
+  height: 100%;
+}
+
+.form-cadastrar{
+  margin-top: 6px;
+}
+
+.board-fornecedores {
+  border: 2px #eea34a solid;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  position: relative;
+}
+
+.board-fornecedores h2 {
+  margin-top: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.cadastro-fornecedor {
+  margin-top: 14px;
+  padding-top: 14px;
+  background-color: #EEA34A;
+  border-radius: 10px;
+  padding-left: 15px;
+  height: 95%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.cadastro-fornecedor h2{
+  margin-top: 6px;
+  margin-bottom: 2px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.lista-fornecedor {
+  margin-top: 30px;
+  list-style: none;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+.list-fornecedor li {
+  display: flex !important;
+}
+
+#cnpj, #nomeFornecedor, #emailFornecedor, #ruaFornecedor, #numeroFornecedor, #bairroFornecedor, #cidadeFornecedor, #estadoFornecedor{
+  background-color: #d9d9d9;
+  width: 95%;
+  height: 25px;
+}
+
+#botao-editar-produto {
+  width: 90px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#botao-cadastrar-produto {
+  width: 110px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+/***********************************/
+/**********TELA PRODUTOS********/
+/***********************************/
+
+.produto{
+  width: 50vw;
+  height: 100%;
+  }
+  
+  .form-produto{
+    padding: 10px;
+    width: 50vw;
+    height: 100%;
+  }
+  
+  .board-produto {
+    border: 2px #eea34a solid;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    position: relative;
+  }
+  
+  .board-produto h2 {
+    margin-top: 8px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .cadastro-produto {
+    overflow: hidden;
+    margin-top: 14px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: #EEA34A;
+    border-radius: 10px;
+    padding-left: 15px;
+    height: 95%;
+    overflow-y: scroll; 
+  }
+  
+  .cadastro-produto h2{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .lista-produto {
+    margin-top: 30px;
+    list-style: none;
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  
+  .list-produto li {
+    display: flex !important;
+  }
+
+  .input-produto {
+    width: 80%;
+  }
+
+  #quantidade, #cnpjFornecedor, #tipoProduto, #unidadeMedida, #publico {
+    width: 95%;
+    height: 25px;
+    background-color: #d9d9d9;
+  }
+
+  #nomeProduto, #nomeProduto-label{
+    width: 95%;
+    height: 25px;
+    margin-left: -15px;
+  }
+
+  #valorProduto, #quantidade, #cod, #nomeProduto, #quantidade, #cnpjFornecedor, #tipoProduto, #unidadeMedida, #publico{
+    background-color: #d9d9d9;
+
+  }
+
+  #cod,#cod-label {
+    width: 40%;
+    height: 25px;
+  }
+
+  #valorProduto, #quantidade {
+    width: 90%;
+    height: 25px;
+
+  }
+
+  .form-inputs{
+    height: 60%;
+  }
+
+  .dois-campos{
+    display: flex;
+  }
+
+  .botoes{
+    width: 95%;
+    display: flex;
+    margin-left: 10px;
+    bottom: 0;
+    justify-content: space-between;
+}
+  
+
+  #botao-editar-produto {
+    width: 90px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  #botao-cadastrar-produto {
+    width: 110px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
