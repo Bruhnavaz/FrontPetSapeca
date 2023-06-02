@@ -40,15 +40,15 @@ const Carrinho = () => {
         <main className="main-carrinho">
           <div className="produtos">
           <div className="card">
-              <img
-                src="caminho_da_imagem"
-                alt="Imagem do Produto"
-                className="card-img"
-              />
+          <img
+              src="/racao01.png"
+              alt="Imagem do Produto"
+              className="card-img"
+            />
               <div className="card-content">
-                <h3 className="card-title">Nome do Produto</h3>
-                <p className="card-price">R$ 99,99</p>
-                <p className="card-description">Descrição do produto...</p>
+              <h3 className="card-title">Pedigree</h3>
+              <p className="card-price">R$ 99,99</p>
+              <p className="card-description">Ração Pedigree para cachorro 15kg</p>
                 <div className="card-icons">
                   <span className="heart-icon">
                     {" "}
@@ -94,15 +94,15 @@ const Carrinho = () => {
               </div>
             </div> */}
             <div className="card">
-              <img
-                src="caminho_da_imagem"
-                alt="Imagem do Produto"
-                className="card-img"
-              />
+            <img
+              src="/racao02.png"
+              alt="Imagem do Produto"
+              className="card-img"
+            />
               <div className="card-content">
-                <h3 className="card-title">Nome do Produto</h3>
-                <p className="card-price">R$ 99,99</p>
-                <p className="card-description">Descrição do produto...</p>
+              <h3 className="card-title">Whiskas sabor peixe</h3>
+              <p className="card-price">R$ 49,99</p>
+              <p className="card-description">Wiskas sabor peixe 900g</p>
                 <div className="card-icons">
                   <span className="heart-icon">
                     {" "}
@@ -122,15 +122,15 @@ const Carrinho = () => {
             </div>
 
             <div className="card">
-              <img
-                src="caminho_da_imagem"
-                alt="Imagem do Produto"
-                className="card-img"
-              />
+            <img
+              src="/racao03.png"
+              alt="Imagem do Produto"
+              className="card-img"
+            />
               <div className="card-content">
-                <h3 className="card-title">Nome do Produto</h3>
-                <p className="card-price">R$ 99,99</p>
-                <p className="card-description">Descrição do produto...</p>
+              <h3 className="card-title">Areia Premium</h3>
+              <p className="card-price">R$ 109,00</p>
+              <p className="card-description">Areia para gato premium 4kg</p>
                 <div className="card-icons">
                   <span className="heart-icon">
                     {" "}
