@@ -15,9 +15,11 @@ const base_url = (config.debug ? config.dev_url : config.url) + "/produto";
 
 const Produtos = () => {
   const [produtos, setProdutos] = useState([]);
+  const [idProduto, setIdProduto] = useState(null)
+
   // const {produto} = useProdutos()
   const toast = useToast();
-  const { reset, register, handleSubmit } = useForm();
+  const { reset, register, handleSubmit, setValue } = useForm();
   // const { mutate: mutateDeleteProdutos, isLoading: isLoadingProdutos, isError: isErrorDelete } = useDeleteProdutos()
   const { mutate: mutateCreateProdutos, isError } = useProdutos();
   useEffect(() => {
@@ -35,28 +37,25 @@ const Produtos = () => {
       });
   };
 
-  // const onDeleteProdutos= (id) => {mutateDeleteProdutos (id)
-  //   if(isErrorDelete){
-  //     alert('Erro ao remover!')
-  //   } else {
-  //     alert('Removido com sucesso!')
-  //     refetch()
-  //   }
-  // }
-
   const onSubmit = (data) => {
-    fetch(base_url, { body: JSON.stringify(data),method: "POST", headers: {
+    if (idProduto!=null)
+      data.id = idProduto;
+    ((idProduto==null)?fetch(base_url, { body: JSON.stringify(data),method: "POST", headers: {
       "Content-Type": "application/json",
-    }, })
+    }, }):
+    fetch(base_url+"/"+idProduto, { body: JSON.stringify(data),method: "PUT", headers: {
+      "Content-Type": "application/json",
+    }, }))
       .then(() => {
         toast({
           title: "Sucesso",
-          description: "Produto criado com sucesso",
+          description: (idProduto==null)?"Produto criado com sucesso":"Produto editado com sucesso",
           status: "success",
           // duration: 3000,
           // isClosable: true,
           // onCloseComplete: () => window.location = '/'
         });
+        setIdProduto(null)
         downloadProdutos();
         reset();
       })
@@ -71,19 +70,7 @@ const Produtos = () => {
           // onCloseComplete: () => window.location = '/'
         });
       });
-    // mutateCreateProdutos(data);
-    // if (!isError) {
-    //   toast({
-    //     title: "Sucesso",
-    //     description: "Produto criado com sucesso",
-    //     status: "success",
-    //     // duration: 3000,
-    //     // isClosable: true,
-    //     // onCloseComplete: () => window.location = '/'
-    //   });
-    //   downloadProdutos();
-    //   reset();
-    // }
+
   };
   const deleteProduto = (id) => {
     fetch(base_url+"/"+id ,{method: "DELETE"})
@@ -146,13 +133,31 @@ const Produtos = () => {
                 Cod: {produto.id} <br /> Produto: {produto.nomeProduto} <br /> Qtd: {produto.quantidade} <br /> Valor: R${produto.valor}
                 <div type="button"
                       onClick={() => {
+                        setValue("cod",produto.cod);
+                        setValue("cnpjFornecedor",produto.cnpjFornecedor);
+                        setValue("nomeProduto",produto.nomeProduto);
+                        setValue("tipoProduto",produto.tipoProduto);
+                        setValue("quantidade",produto.quantidade);
+                        setValue("unidadeMedida",produto.unidadeMedida);
+                        setValue("publico",produto.publico);
+                        setValue("valor",produto.valor);
+                        setIdProduto(produto.id)
+                      }}
+                    >
+                <i class="mdi mdi-pencil">
+                        
+                        </i>
+                    </div>
+                <div type="button"
+                      onClick={() => {
                         if (window.confirm("Deseja excluir?")) {
                           deleteProduto(produto.id)
                         }
                       }}
                     >
-                      {" "}
-                      &#128465;
+                      <i class="mdi mdi-trash-can-outline">
+                        
+                      </i>
                     </div>
                 </div>
                   ))
@@ -178,7 +183,10 @@ const Produtos = () => {
                     {/* <div className="space-5"></div> */}
                     <FormControl id="nomeProduto" className="nomeProduto">
                       <FormLabel>Nome Produto</FormLabel>
-                      <Input
+
+                      <Input 
+                      // onChange={(e) => {setNomeProduto(e.target.value)}}
+                      // value = {nomeProduto}
                         type="text"
                         {...register("nomeProduto", { required: true })}
                       />
@@ -241,27 +249,13 @@ const Produtos = () => {
                   </FormControl>
                   <div className="botoes">
 
-
-                    <Button
-                      id="botao-editar-produto"
-                      mt={4}
-                      colorScheme="teal"
-                      // isLoading={isLoadingDeleteProduto}
-                      //
-                      //     }
-                      // }}
-                    >
-                      Editar
-                    </Button>
-
                     <Button
                       id="botao-cadastrar-produto"
                       mt={4}
                       colorScheme="teal"
                       type="submit"
                     >
-                      Salvar
-                    </Button>
+                      {(idProduto!=null)?"Salvar":"Cadastrar"}                    </Button>
                   </div>
                   {/* <Button id="botao-cadastrar" mt={4} colorScheme="teal" type="submit">
             <Link to="/home">Cadastrar</Link>{" "}
