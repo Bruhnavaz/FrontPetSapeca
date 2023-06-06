@@ -1,7 +1,9 @@
 import { useQuery } from "@tanstack/react-query"
+import {config} from "../../config";
 
+const base_url = ((config.debug)?config.dev_url:config.url)+"/produto";
 const fetchProdutos = async () => {
-    const res = await fetch('https://api-grupocinco.onrender.com/users')
+    const res = await fetch(`${base_url}`)
     return res.json()
 }
 
@@ -15,16 +17,25 @@ export const useCreateProdutos = () => {
     }
 }
 
-const fetchProdutosById = async (id) => {
-    const res = await fetch(`http://localhost:3000/users/${id}`)
+const fetchProdutoById = async (id) => {
+    const res = await fetch(`${base_url}/${id}`)
     return res.json()  
     
 }
-
-export const useProdutos = (id) => {
-    const {data, error, isError, isLoading} = useQuery(['produtos',id],() => fetchProdutosById(id))
+export const useProdutos = () => {
+    const {data, error, isError, isLoading} = useQuery(['produtos'],fetchProdutos)
     return {
-        user: data,
+        produtos: data,
+        error,
+        isLoading,
+        isError
+    }
+}
+
+export const useProduto = (id) => {
+    const {data, error, isError, isLoading} = useQuery(['produto',id],() => fetchProdutoById(id))
+    return {
+        produto: data,
         error,
         isLoading,
         isError

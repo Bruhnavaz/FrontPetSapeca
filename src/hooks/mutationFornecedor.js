@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 
 const createFornecedor = async (fornecedor) => {
-  const res = await fetch("https://api-grupocinco.onrender.com/fornecedor", {
+  const res = await fetch(`http://localhost:3000/fornecedor`, {
     method: "POST",
     body: JSON.stringify(fornecedor),
     headers: {
