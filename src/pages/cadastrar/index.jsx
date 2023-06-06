@@ -16,9 +16,9 @@ const CreateUser = () => {
             title: "Sucesso",
             description: "Usuário criado com sucesso",
             status: 'success',
-            // duration: 3000,
-            // isClosable: true,
-            // onCloseComplete: () => window.location = '/'
+            duration: 3000,
+            isClosable: true,
+            onCloseComplete: () => window.location = '/'
         })
         reset()
     }

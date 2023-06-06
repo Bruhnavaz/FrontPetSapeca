@@ -55,7 +55,7 @@ const CreateUser = () => {
         </form>
       </div>
       <Button id="botao-cadastro" mt={4} colorScheme="teal" type="submit">
-        <Link to="/cadastrar">Cadastre-se</Link>{" "}
+        <Link to="/cadastrar">Cadastre-se</Link>{"/"}
       </Button>
     </main>
     // <Container className="container-login">
